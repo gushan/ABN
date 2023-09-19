@@ -19,7 +19,7 @@ class BatchNorm(nn.Module):
         # auxiliary parameters
         self.num_features = num_features
         self.eps = 1e-5
-        self.momentum = 0.1
+        self.momentum = 0.9
         # hyper paramaters
         self.gamma = nn.Parameter(torch.Tensor(self.num_features), requires_grad=True)
         self.beta = nn.Parameter(torch.Tensor(self.num_features), requires_grad=True)     
